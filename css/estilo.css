@@ -1,0 +1,107 @@
+/* GERAL */
+*{
+	font-family:verdana,tahoma,arial;
+	text-decoration:none;
+	font-size: 100%;
+	list-style:none;
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+@media only screen and (max-width: 320px) {
+   span.logo img{ height: 50%; }
+}
+
+@media screen and (-webkit-device-pixel-ratio:3) {
+   span.logo img{ height: 50%; }
+}
+
+
+
+body{}
+	.logo{
+		position: absolute;
+		height: 90px;
+		width: 200px;
+		z-index: 3;
+		top: -90px;
+		left: 0px;
+	}
+		span.logo img{
+			margin: 0 auto;
+			display: block;
+			height: 100%;
+		}
+
+	nav{
+		background-color: #eee;
+		position: absolute;
+		min-width: 200px;
+		left: -180px;
+		height: 100%;
+		width: 200px;
+		z-index: 2;
+	}
+	nav:before{
+	    content:"";
+	    display:block;
+	    position:absolute;
+	    z-index:-1;
+	    top:0px;
+	    left:0px;
+	    right:1px;
+	    bottom:0px;
+	    border-right:1px solid #aaa
+	}
+		nav ul{
+			position: absolute;
+			width: 100%;
+			top: 130px;
+		}
+			nav ul li{
+				border-bottom: 1px #ccc solid;
+				position: relative;
+				line-height: 35px;
+				height: 35px;
+				width: 100%;
+			}
+			nav ul li a{
+				border-right: 18px #999 solid;
+				padding-left: 35px;
+				margin-right: 1px;
+				font-size: 12px;
+				display: block;
+				z-index: 3;
+			}
+				nav ul li.ativo a,
+				nav ul li a:hover{
+					border-color: #666;
+				}
+
+		nav ul.contato{
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			top: auto;
+		}
+
+	section{
+		background-color: #444;
+		position: absolute;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		z-index: 0;
+		left: 20px;
+		top: 0;
+	}
+		section .content{
+			position: absolute;
+			left: 20px;
+		}
+		section .content h1{
+			line-height: 90px;
+			font-size: 30px;
+			height: 90px;
+		}
